@@ -28,11 +28,11 @@ namespace Elsa.Activities.Sql.Activities
         [ActivityInput(
             UIHint = ActivityInputUIHints.Dropdown,
             Hint = "Allowed databases to run SQL.",
-            Options = new[] { "MSSQL Server", "PostgreSql" },
-            DefaultValue = "MSSQL Server",
+            Options = new[] { SupportedDatabases.MSSQLServer, SupportedDatabases.PostgreSql },
+            DefaultValue = SupportedDatabases.MSSQLServer,
             SupportedSyntaxes = new[] { SyntaxNames.JavaScript, SyntaxNames.Liquid }
         )]
-        public string? Database { get; set; } = "MSSQL Server";
+        public string? Database { get; set; } = SupportedDatabases.MSSQLServer;
 
         /// <summary>
         /// SQl script to execute

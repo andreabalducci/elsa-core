@@ -11,9 +11,9 @@ namespace Elsa.Activities.Sql.Factory
         {
             switch (createSqlClient.Database)
             {
-                case "MSSQLServer":
+                case SupportedDatabases.MSSQLServer:
                     return new SqlServerClient(createSqlClient.ConnectionString);
-                case "PostgreSql":
+                case SupportedDatabases.PostgreSql:
                     return new PostgreSqlClient(createSqlClient.ConnectionString);
                 default:
                     throw new ArgumentException($"Unsupported database type: {createSqlClient.Database}");

@@ -26,7 +26,7 @@ namespace Elsa.Activities.Sql.Activities
         [ActivityInput(
             UIHint = ActivityInputUIHints.Dropdown,
             Hint = "Allowed databases to run SQL.",
-            Options = new[] { "", "MSSQL Server", "PostgreSql" },
+            Options = new[] { SupportedDatabases.MSSQLServer, SupportedDatabases.PostgreSql },
             SupportedSyntaxes = new[] { SyntaxNames.JavaScript, SyntaxNames.Liquid }
         )]
         public string? Database { get; set; }
